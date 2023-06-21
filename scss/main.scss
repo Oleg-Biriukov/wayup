@@ -1,0 +1,292 @@
+$color_text:#fff;
+
+@mixin size($width, $height){
+	width: $width;
+	height: $height;
+}
+
+body{
+	font-family: 'Ubuntu', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+div, p, input, button, form, span, a, ul, li{
+	box-sizing: border-box;
+	font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6{
+	color: #1C1429;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-weight: 700;
+}
+ 
+
+.conteyner{
+	width: 1171px;
+	margin: 0 auto;
+}
+
+.header{
+	background: rgb(0,189,254);
+	background: linear-gradient(104deg, rgba(0,189,254,1) 0%, rgba(0,144,220,1) 100%);	
+	padding-bottom: 215px;
+}
+
+.logo{
+	margin-top: 63px;
+}
+
+.wrapper{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.offer{
+	padding-top: 145px;
+	color: $color_text;
+}
+
+.title{
+	color: $color_text;
+	line-height: 1.7em;
+}
+
+.title span{
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 1.5em;
+}
+
+.intro{
+	@include size(390px, 70px);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.4em
+}
+
+.btn{
+	color: #2C2513;
+	@include size(222px, 57px);
+	padding-top: 17px;
+	margin-top: 45px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	font-weight: 900;
+	text-align: center;
+	background:#C4A300;
+	display: block;
+	text-decoration: none;
+	transition: all 0.5s;
+}
+
+a:hover{
+	background: #947B00;
+}
+
+.travel{
+	margin-top: 130px;
+	height: 655px
+}
+
+.section1{
+	padding-top: 110px; 
+	padding-bottom: 120px;
+
+}
+.center{
+	color: #1C1429;
+	height: 100px;
+	font-weight: 700;
+	font-size: 30px;
+	text-align: center;
+}
+
+.icons{
+	display: flex;
+	padding-top: 0;
+	justify-content: space-between;
+	
+}
+
+.icon{
+	padding-top: 100px;
+	@include size(300px, 260px);
+	width: 300px;
+	height: 260px;
+	text-align: center;
+	align-items: center;
+}
+
+.img1{
+	background-image: url(../img/icon1.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+.img2{
+	background-image: url(../img/icon2.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+.img3{
+	background-image: url(../img/icon3.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+.iconTitle{
+	color: #1C1429;
+	font-size: 19px;
+	font-weight: 700;
+	height: auto;
+}
+
+.iconText{
+	width: 300px;
+	color: #696471;
+	margin-top: 10px;
+	font-weight: 400;
+	font-size: 15px;
+
+}
+
+.section2{
+	background: #EAF3F8;
+	padding-bottom: 104px;
+}
+
+.formTitle{
+	color: #1C1429;
+	font-size: 30px;
+	font-weight: 700;
+	padding-top: 100px;
+	padding-bottom: 60px; 
+	text-align: center;
+}
+
+.form{
+	width: 340px;
+	margin: 0 auto;
+}
+
+.input{
+	@include size(100%, 50px);
+	padding-left: 30px;
+	border-radius: 3px;
+	margin-bottom: 17px;
+	border: 1px solid #CACDCE
+}
+
+.formbtn{
+	@include size(100%, 50px);
+	background: #FFD500;
+	margin: 0;
+	text-align: center;
+	border: 1px solid #FFD500;
+	padding-top: 5px;
+}
+
+button:hover{
+	background: #8E7600;
+}
+
+.footer{
+	background: #004C7C;
+	color: #D4E2E9;
+}
+
+.credits{
+	padding: 65px 0;
+	text-align: center;
+	margin: 0;
+}
+
+/*Responsive*/
+
+
+/* 992px - 1200px */
+@media screen and (max-width: 1200px) {
+	.conteyner {
+		width: 960px;
+	}
+	.travel{
+		@include size(540px, 540px);
+	}
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+	.conteyner {
+		width: 720px;
+	}
+	.header{
+		padding-bottom: 40px;
+	}
+	.wrapper{
+		flex-direction: column;
+	}
+	.offer{
+		width: 100%;
+	}
+	.travel{
+		display: block;
+		width: 549px;
+		height: 549px;
+		margin: 0 auto;
+	}
+	.icons{
+		flex-direction: column;
+
+	}
+	.img1{
+		background-position: left bottom 75px; 
+	}
+	.img2{
+		background-position: left bottom 75px;
+	}
+	.img3{
+		background-position: left bottom 75px;
+	}
+	.icon{
+		display: block;
+		text-align: left;
+		padding-top: 0px;
+		height: 150px;
+	}
+	.iconTitle{
+		padding-left: 80px;
+	}
+	.iconText{
+		padding-left: 80px;
+	}
+	.section1{
+		padding-bottom: 80px;
+	}
+
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+	.conteyner {
+		width: 540px;
+	}
+}
+
+/* 320px - 576px */
+@media screen and (max-width: 576px) {
+	.conteyner {
+		width: 90%;
+	}
+	.travel{
+		@include size(400px, 400px);
+	}
+	.intro{
+		width: 300px;
+	}
+}
